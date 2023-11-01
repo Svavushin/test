@@ -1,0 +1,22 @@
+.block {
+  display: flex;
+  justify-content: center;
+}
+
+.block div {
+  border: 1px solid red;
+}
+
+.block-ul {
+  display: flex;
+  justify-content: center;
+}
+
+.block-form {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  margin-bottom: 20px !important;
+}
