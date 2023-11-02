@@ -42,27 +42,31 @@ include 'php/test_.php'
 
   <div class="block-ul">
     <ul>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
-      <li>1</li>
+
+      <?
+
+      foreach ($_FILES as $k => $v) {
+        echo "<li>" . $v['name'] . "</li>";
+      }
+      ?>
+
     </ul>
   </div>
 
   </div>
 
   <div class="block-form">
-    <form action="" style="display: block;">
+    <form action="" style="display: block;" method="POST" enctype="multipart/form-data">
 
-      <input type="text" placeholder="num"> <br>
+      <input name="num" type="text" placeholder="num"> <br>
 
-      <input type="text" placeholder="string"> <br>
+      <input name="string" type="text" placeholder="string"> <br>
 
-      <input type="file" placeholder="file"> <br>
+      <input name="file1" type="file" placeholder="file"> <br>
+
+
+      <input name="submit" type="submit">
+
 
 
     </form>
